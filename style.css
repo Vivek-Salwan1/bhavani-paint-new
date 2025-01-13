@@ -94,17 +94,15 @@
 
   /* Hidden Price List */
   .sub-paints {
-    display: none; /* Hidden by default */
+    display: block;
     padding: 1rem;
     background-color: #f4f4f4;
-    display: grid;
-    /* grid-template-columns: repeat(2, 1fr); */
     gap: 0.5rem;
     animation: slideDown 0.5s ease-out;
   }
   
   .sub-paint {
-    background-color: #ffffff;
+    background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 0.5rem;
@@ -113,6 +111,7 @@
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
   }
   
   .sub-paint span:first-child {
@@ -180,6 +179,35 @@ body {
 
 }
 
+.swami-profile.dimmed {
+    opacity: 0.5; /* Dim the background */
+    pointer-events: none; /* Prevent interaction with background */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.popup-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
 
 /* Logo Section */
 .logo-name {
